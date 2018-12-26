@@ -26,11 +26,11 @@ public class CreditApiAutoGeneratorHelper {
 	public static void main( String[] args ) {
 		ConfigGenerator cg = new ConfigGenerator();
 		cg.setConfigDataSource(ConfigDataSource.ORACLE);
-		cg.setEntityPackage("com.creditstate.api.model.entity.po");
-		cg.setServicePackage("com.creditstate.api.data.service");
-		cg.setSuperServiceImpl("com.creditstate.api.data.service.impl");
-		cg.setMapperPackage("com.creditstate.api.data.mapper");
-		String[] tableNames = new String[]{"T_CREDIT_LEARN_USER_APPLY"};
+		cg.setEntityPackage("com.myproject.api.model.entity.po");
+		cg.setServicePackage("com.myproject.api.data.service");
+		cg.setSuperServiceImpl("com.myproject.api.data.service.impl");
+		cg.setMapperPackage("com.myproject.api.data.mapper");
+		String[] tableNames = new String[]{"TABLENAME"};
 		cg.setIdType(IdType.ID_WORKER);
 		if (EnvUtil.isLinux()) {
 			cg.setSaveDir("/Users/hubin/springwind/");
@@ -38,9 +38,9 @@ public class CreditApiAutoGeneratorHelper {
 			cg.setSaveDir("F:/file");
 		}
 		cg.setDbDriverName("oracle.jdbc.driver.OracleDriver");
-		cg.setDbUser("u_hzpt");
-		cg.setDbPassword("p_hzpt");
-		cg.setDbUrl("jdbc:oracle:thin:@10.28.60.219:1521:csdb");
+		cg.setDbUser("username");
+		cg.setDbPassword("password");
+		cg.setDbUrl("jdbc:oracle:thin:@11.22.33.444:1234:abcd");
 		cg.setTableNames(tableNames);
 		cg.setDbPrefix(false);
 		AutoGenerator.run(cg);
